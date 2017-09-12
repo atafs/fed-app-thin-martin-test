@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: #7f8c8d;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 15%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #7f8c8d;
+    color: #e2e5e5;
+}
+
+tr:hover{background-color:#e2e5e5}
+
+.background {
+    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75) ), url('../assets/background.jpg');
+    background-size: cover;
+    background-repeat: none;
+    opacity: .95;
+    color: #fff;
+}
+
