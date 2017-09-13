@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class SearchStarWars extends Component {
+class SWPeopleTable extends Component {
     render() {
         var products = [
             {
@@ -40,4 +40,4 @@ class SearchStarWars extends Component {
     }
 }
 
-export default SearchStarWars;
+export default SWPeopleTable;

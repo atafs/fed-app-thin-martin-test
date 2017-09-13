@@ -2,7 +2,6 @@
 
 * {
     padding: 0;
-    margin: 0;
     font-family: 'Lato', sans-serif;
     color: #7f8c8d;
 }
@@ -15,8 +14,9 @@ table {
 }
 
 h1 {
+    margin: 0;
     text-align: center;
-    padding: 15%;
+    padding: 30% 0 0 10%;
 }
 
 th, td {
@@ -33,7 +33,7 @@ th {
 tr:hover{background-color:#e2e5e5}
 
 .background {
-    background: linear-gradient( rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75) ), url('../assets/background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .6) ), url('../assets/background.jpg');
     background-size: cover;
     background-repeat: none;
     opacity: .95;
