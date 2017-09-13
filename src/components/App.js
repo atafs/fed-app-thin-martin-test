@@ -8,7 +8,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1 className="background">Star Wars &hellip;</h1>
+                <h4 className="background">Star Wars &hellip;</h4>
                 <SWPeopleTable />
             </div>
         )

@@ -13,7 +13,7 @@ table {
     overflow-x: auto;
 }
 
-h1 {
+h4 {
     margin: 0;
     text-align: center;
     padding: 30% 0 0 10%;
@@ -37,6 +37,14 @@ tr:hover{background-color:#e2e5e5}
     background-size: cover;
     background-repeat: none;
     opacity: .95;
-    color: #fff;
+    color: #222;
 }
+
+.arrow {
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 15px;
+    color: yellow;
+}
+
 
