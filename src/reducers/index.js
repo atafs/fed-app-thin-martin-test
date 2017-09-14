@@ -2,6 +2,8 @@ import { combineReducers } from 'redux';
 import { RECEIVE_SW_PEOPLE } from '../actions';
 import { FAVORITE_SW_PEOPLE, UNFAVORITE_SW_PEOPLE } from '../actions';
 
+import ActiveSWPerson from './activeSWPerson';
+
 function swpeople(state = [], action) {
     switch(action.type) {
         case RECEIVE_SW_PEOPLE:
@@ -26,6 +28,6 @@ function favoritePeople(state = [], action) {
     }
 }
 
-const rootReducer = combineReducers({ swpeople, favoritePeople });
+const rootReducer = combineReducers({ swpeople, favoritePeople, ActiveSWPerson });
 
 export default rootReducer;

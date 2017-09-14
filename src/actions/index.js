@@ -1,6 +1,7 @@
 export const RECEIVE_SW_PEOPLE = 'RECEIVE_SW_PEOPLE';
 export const FAVORITE_SW_PEOPLE = 'FAVORITE_SW_PEOPLE';
 export const UNFAVORITE_SW_PEOPLE = 'UNFAVORITE_SW_PEOPLE';
+export const SELECT_SW_PERSON = 'SELECT_SW_PERSON';
 
 function receiveSWPeople(json) {
     const swpeople = json.results;
@@ -34,5 +35,14 @@ export function unfavoritePeople(people) {
     return {
         type: UNFAVORITE_SW_PEOPLE,
         people
+    }
+}
+
+export function selectSWPerson(person) {
+    console.log('A person has been selected', person.name);
+
+    return {
+        type: SELECT_SW_PERSON,
+        person
     }
 }

@@ -8,8 +8,7 @@
 
 table {
     border-collapse: collapse;
-    width: 100%;
-
+    width: 50%;
     overflow-x: auto;
 }
 
@@ -25,12 +24,27 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+.td-no-border {
+    border-bottom: none;
+    padding: 20px;
+}
+
 th {
     background-color: #7f8c8d;
     color: #e2e5e5;
 }
 
 tr:hover{background-color:#e2e5e5}
+
+.container {
+    display: flex;
+    padding: 0;
+    max-width: 100%;
+}
+
+.content {
+    flex-basis: 50%;
+}
 
 .background {
     background: linear-gradient( rgba(0, 0, 0, .25), rgba(0, 0, 0, .6) ), url('../assets/background.jpg');
@@ -45,6 +59,7 @@ tr:hover{background-color:#e2e5e5}
     font-size: 30px;
     margin-right: 15px;
     color: yellow;
+    text-align: right;
 }
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import SWPeopleTable from './SWPeopleTable';
+import SWPersonList from './SWPersonList';
 
 import '../styles/index.css';
 
@@ -9,7 +10,10 @@ class App extends Component {
         return (
             <div>
                 <h4 className="background">Star Wars &hellip;</h4>
-                <SWPeopleTable />
+                <div className="container">
+                    <SWPeopleTable className="content" />
+                    <SWPersonList className="content" />
+                </div>
             </div>
         )
     }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { selectSWPerson } from '../actions';
+import { bindActionCreators } from 'redux';
+
 class SWPeopleTable extends Component {
-    openPeople() {
-        console.log('openPeople');
-    }
     render() {
-        console.log('props', this.props)
+        console.log('swPeopleTable props', this.props)
         
         return (
             <table>
@@ -16,17 +16,17 @@ class SWPeopleTable extends Component {
                         <th>Height</th>
                         <th>Skin Color</th>
                         <th>Gender</th>
-                        <th>Actions</th>
+                        <th />
                     </tr>
                     {
-                        this.props.swpeople.map( (people, index) => {
+                        this.props.swpeople.map( (person, index) => {
                             return (
                                 <tr key={index} >
-                                    <td>{people.name}</td>
-                                    <td>{people.height}</td>
-                                    <td>{people.skin_color}</td>
-                                    <td>{people.gender}</td>
-                                    <td className="arrow" onClick={this.openPeople}>
+                                    <td>{person.name}</td>
+                                    <td>{person.height}</td>
+                                    <td>{person.skin_color}</td>
+                                    <td>{person.gender}</td>
+                                    <td className="arrow" onClick={() => this.props.selectSWPerson(person)}>
                                         &#10148;
                                     </td>
                                 </tr>
@@ -43,4 +43,8 @@ function mapStateToProps(state) {
     return state;
 }
 
-export default connect(mapStateToProps, null)(SWPeopleTable);
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ selectSWPerson }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SWPeopleTable);
